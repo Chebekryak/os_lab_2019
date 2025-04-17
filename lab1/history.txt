@@ -1,0 +1,60 @@
+    1  pwd
+    2  gcc
+    3  cd lab0
+    4  mkdir hello
+    5  cd hello
+    6  touch empty
+    7  cp ../src/hello.c newhello.c
+    8  ../../update.sh
+    9  ping ya.ru -с 5
+   10  ping ya.ru -c 5
+   11  sudo ping ya.ru -c 5
+   12  ping vk.ru -c 5
+   13  gcc -v
+   14  gcc newhello.c -o hello_world
+   15  hello_world
+   16  ./hello_world
+   17  git add *
+   18  git status
+   19  git rm --cached hello_world
+   20  git status
+   21  git commit -m "добавлен hello.c и empty"
+   22  git push
+   23  cat ~/bash_history
+   24  history
+   25  cd ../../lab1
+   26  ./background.sh &
+   27  src/background.sh &
+   28  touch test.txt
+   29  cat test.txt
+   30  clear
+   31  wc -m test.txt
+   32  cd src
+   33  grep "cake" cake_rhymes.txt > with_cake.txt
+   34  rm test.txt > /dev/null
+   35  rm ../test.txt > /dev/null
+   36  ./hello.sh
+   37  chmod -x hello.sh
+   38  ./hello.sh
+   39  chmod +x hello.sh
+   40  ./hello.sh
+   41  touch bash_script.sh
+   42  ./bash_sript.sh
+   43  chmod +x bash_script.sh
+   44  ./bash_sript.sh
+   45  ./bash_script.sh
+   46  touch average.sh
+   47  touch random.sh
+   48  touch numbers.txt
+   49  ./ random.sh
+   50  ./random.sh
+   51  chmod +x random.sh
+   52  ./random.sh
+   53  bash ./random.sh
+   54  chmod +x average.sh
+   55  ./average.sh 1 2 3
+   56  xargs ./average.sh < numbers.txt
+   57  cat history ../history.txt
+   58  touch ../history.txt
+   59  cat ~/.bash_history ../history.txt
+   60  history > ../history.txt
