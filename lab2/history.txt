@@ -1,0 +1,39 @@
+    1  cd lab2/src/swap
+    2  gcc main.c swap.c -o swap_exe
+    3  ./swap.exe
+    4  ./swap_exe
+    5  cd ../revert_string
+    6  gcc main.c revert_string.c -o revert_string_exe
+    7  ./revert_string_exe
+    8  ./revert_string_exe "reverse"
+    9  gcc -c revert_string.c
+   10  ar rcs lib_revert_string.a revert_string.0
+   11  ar rcs lib_revert_string.a revert_string.o
+   12  gcc main.c -L. -l revert_string -o static_revert_program
+   13  gcc main.c -L. -lib_revert_string -o static_revert_program
+   14  gcc main.c -L. lib_revert_string -o static_revert_program
+   15  gcc main.c -L lib_revert_string -o static_revert_program
+   16  gcc -c revert_string.c
+   17  ar rcs librevert_string.a revert_string.o
+   18  gcc main.c -L. -lrevert_string -o static_revert_program
+   19  ./static_revert_program "reverse2"
+   20  gcc -fPIC -c revert_string.c -o revert_string_d.o
+   21  gcc -shared revert_string_d.o -o librevert_string.o
+   22  gcc main.c -L. -lrevert_string -o dunamic_revert_program
+   23  export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
+   24  ./dunamic_revert_program "reverse3"
+   25  cd ../tests
+   26  gcc tests.c -L. -lrevert_string -lcunit -o test_program
+   27  gcc tests.c -lrevert_string -lcunit -o test_program
+   28  cd ../tests
+   29  gcc tests.c -L. -lrevert_string -lcunit -o test_program
+   30  cd ../tests
+   31  gcc tests.c -L. -lrevert_string -lcunit -o test_program
+   32  gcc tests.c -L. -lrevert_string.o -lcunit -o test_program
+   33  cd ../revert_string
+   34  gcc tests.c -L. -lrevert_string -lcunit -o test_program
+   35  export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
+   36  ./test_program
+   37  cd ../..
+   38  touch history.txt
+   39  history > history.txt
