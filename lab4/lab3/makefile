@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=-I.
+CFLAGS=-I. -w
 
 all: parallel_min_max exec process_memory
 
